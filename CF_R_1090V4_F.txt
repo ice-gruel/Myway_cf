@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int T; cin >> T;
+    while (T--)
+    {
+        int x, y; cin >> x >> y;
+        if (x > y)
+        {
+            cout << "NO" << '\n'; continue;
+        }
+        int count;
+
+        if ((x + y) % 2 == 0)
+        {
+            if (x < 1)
+            {
+                cout << "NO" << '\n'; continue;
+            }
+            count = (y - x) / 2;
+            if (x == 0)
+            {
+                cout << "NO" << '\n';
+            }
+        }
+        else
+        {
+            if (y < 1)
+            {
+                cout << "NO" << '\n'; continue;
+            }
+            count = (y - 1 - x) / 2;
+        }
+        cout << "YES" << '\n';
+        if (x + y == 1)
+        {
+            continue;
+        }
+        if ((x + y) % 2 == 1)
+        {
+
+            int p = (x + y) / 2 - count + 1;
+            for (int i = 1; i <= (x + y) / 2; i++)
+            {
+                if (i >= p)
+                {
+                    cout << 2 * i - 1 << ' ' << 2 * i << '\n';
+
+                    cout << 2 * i - 1 << ' ' << 2 * i + 1 << '\n';
+                }
+                else
+                {
+                    cout << 2 * i - 1 << ' ' << 2 * i << '\n';
+
+                    cout << 2 * i << ' ' << 2 * i + 1 << '\n';
+                }
+            }
+        }
+        else
+        {
+            cout << 1 << ' ' << 2 << '\n';
+
+            int p = (x + y) / 2 - count + 1;
+            for (int i = 2; i <= (x + y) / 2; i++)
+            {
+                if (i >= p)
+                {
+                    cout << 2 * (i - 1) << ' ' << 2 * i - 1 << '\n';
+
+                    cout << 2 * (i - 1) << ' ' << 2 * i << '\n';
+                }
+                else
+                {
+                    cout << 2 * (i - 1) << ' ' << 2 * i - 1 << '\n';
+
+                    cout << 2 * i - 1 << ' ' << 2 * i << '\n';
+                }
+            }
+        }
+
+
+    }
+
+    /*处理NO的时候太繁琐了 应该用 || 来全部解决 而不是用一堆if*/
+    /* 在处理输出的时候也不太好 想的是从下往上把偶节点的子树链接到他的父然后自己变为子 这不如需要改变几个偶节点 就再1这个根上多几个子节点 很明显 这样是对的而且很好*/
+    return 0;
+}
