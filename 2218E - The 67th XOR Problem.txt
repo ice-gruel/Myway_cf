@@ -1,0 +1,32 @@
+& | ^纯在结合律
+&是看存不存在1 |是看存不存在0 ^是看奇偶 1是奇数则是1 偶数就是0
+每一个都^一个的时候 下一次这个会出现2倍的情况 并且x^x是0 x^0为x本身
+所以说只需要找到哪一个和哪一个^之后最大就行
+#include <iostream>
+using namespace std;
+#include <vector>
+int main()
+{
+    int T;cin>>T;
+    while(T--)
+    {
+        int size;cin>>size;int re=0;int tem_max=0;
+        vector<int> get(size);
+        for(int i=0;i<size;i++)
+        {int tem;cin>>tem; get[i]=tem;}
+        for(int i=0;i<size-1;i++)
+        {
+            for(int j=i+1;j<size;j++)
+            {
+                tem_max = get[i]^get[j];
+                if(tem_max>re)
+                    re = tem_max;
+            }
+        }
+        cout<<re<<'\n';
+           
+        
+
+    }
+    return 0;
+}
