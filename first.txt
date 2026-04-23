@@ -1,0 +1,44 @@
+2026/4/20 写了很多比较轻松的题 然后又生成了一份清单 11点 1做完了 1的最后一个不做了 太简单也 休息然后睡觉
+一、中等 B 题（Div.2 B 位，1200~1300 分）
+1. 基础中等 B（1200 分档，稳过 B 的基础）
+表格
+题型	题目	考点	直达链接
+数学 / 规律	1409B - Minimum Product	二次函数极值	https://codeforces.com/contest/1409/problem/B
+数学 / 规律	1283B - Candies Division	取模数学	https://codeforces.com/contest/1283/problem/B
+数学 / 规律	1296B - Food Buying	模拟 + 整除	https://codeforces.com/contest/1296/problem/B
+贪心	1256B - Binary String Minimizing	排序贪心	https://codeforces.com/contest/1256/problem/B
+贪心	1353B - Two Arrays And Swaps	排序交换贪心	https://codeforces.com/contest/1353/problem/B
+构造	1343B - Balanced Array	奇偶构造	https://codeforces.com/contest/1343/problem/B
+构造	1294B - Collecting Packages	路径构造	https://codeforces.com/contest/1294/problem/B
+模拟	1367B - Even Array	数组模拟调整	https://codeforces.com/contest/1367/problem/B
+2. 进阶中等 B（1300 分档，B 题天花板）
+表格
+题型	题目	考点	直达链接
+组合数学	1328B - K-th Beautiful String	第 k 个字典序串	https://codeforces.com/contest/1328/problem/B
+贪心	1194B - Yet Another Crosses Problem	网格贪心	https://codeforces.com/contest/1194/problem/B
+模拟	1399B - Gifts Fixing	统计模拟	https://codeforces.com/contest/1399/problem/B
+字符串	1285B - Just Eat It!	子数组和	https://codeforces.com/contest/1285/problem/B
+二、中等 C 题（Div.2 C 位，1400~1500 分）
+1. 基础中等 C（1400 分档，入门 C 题）
+表格
+题型	题目	考点	直达链接
+二分答案	1324C - Boats Competition	二分枚举验证	https://codeforces.com/contest/1324/problem/C
+二分答案	1385C - Make It Good	二分找分界	https://codeforces.com/contest/1385/problem/C
+贪心	1334C - Circle of Monsters	环形贪心	https://codeforces.com/contest/1334/problem/C
+贪心	1359C - Mixing Water	温度贪心 + 二分	https://codeforces.com/contest/1359/problem/C
+基础 DP	1389C - Good String	字符串 DP	https://codeforces.com/contest/1389/problem/C
+构造 / 思维	1343C - Alternating Subsequence	交替子序列	https://codeforces.com/contest/1343/problem/C
+构造 / 思维	1294C - Product of Three Numbers	因数构造	https://codeforces.com/contest/1294/problem/C
+前缀和	1398C - Good Subarrays	前缀和统计	https://codeforces.com/contest/1398/problem/C
+2. 进阶中等 C（1500 分档，就是你说的 v2 风格 C）
+表格
+题型	题目	考点	直达链接
+二分答案	1118D2 - Harsh Sum（原版 v2 题）	二分 + 贪心	https://codeforces.com/contest/1118/problem/D2
+二分答案	1251D - Same Differences	二分 + 哈希	https://codeforces.com/contest/1251/problem/D
+二分 + 贪心	371C - Hamburgers	经典二分贪心	https://codeforces.com/contest/371/problem/C
+基础 DP	431C - k-Tree	入门线性 DP	https://codeforces.com/contest/431/problem/C
+基础 DP	1633D - Make Them Equal	操作 DP	https://codeforces.com/contest/1633/problem/D
+数论构造	1514C - Product 1 Modulo N	互质构造	https://codeforces.com/contest/1514/problem/C
+鸽巢原理	1305C - Kuroni and Impossible Calculation	鸽巢 + 暴力	https://codeforces.com/contest/1305/problem/C
+网格构造	1358C - Celex Update	网格数学构造	https://codeforces.com/contest/1358/problem/C
+前缀和	1234D - Distinct Characters Queries	字符前缀统计	https://codeforces.com/contest/1234/problem/D
