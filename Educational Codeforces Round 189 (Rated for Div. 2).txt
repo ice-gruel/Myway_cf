@@ -1,0 +1,78 @@
+abc直接出来了 d处理mod上错误了 一直溢出 在两个数相乘的时候移除ull了
+在 a×b的时候 可以(a%mod)*(b%mod) 这样是对的 很容易想到其实也
+e是密堆积 圆形的密堆积 使得涉及面积不小于 2r的等边三角形又r半径的半圆面积 比89%多
+-至少有 89
+ %的点位于圆内或圆的边界上（换句话说，位于圆内或圆的边界上的点的数量至少为 89n100
+ ）。
+
+具体是
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <utility>
+#include <set>
+#include <cmath>
+int main()
+{
+    int n, r; cin >> n >> r;
+    vector<pair<int, int>> it(n);
+    for (auto& i : it)
+        cin >> i.first >> i.second;
+    int count = 0;
+    
+    int step_x = 2 * r, step_y = pow(3, 1.0 / 2) * r + 1;//移动必须大于这个但是向下取整了需要加1;
+        for (int pian_x = 0; pian_x < step_x; pian_x++)
+        {
+            for (int pian_y = 0; pian_y < step_y * 2; pian_y++)
+            {
+                set<pair<int, int>> re; int re_count = 0;
+                for (auto& p : it)
+                {
+                    bool found1 = false;
+                    int x = p.first;   
+                    int y = p.second;  
+                    for (int dy = -1; dy <= 1 && !found1; dy++)
+                    {
+                        for (int dx = -1; dx <= 1 && !found1; dx++)
+                        {
+                            int rel_y = ((y - pian_y) / step_y) * step_y + dy * step_y + pian_y;
+                            int tem_x = (rel_y / step_y) % 2;
+                            if (tem_x != 0)
+                                tem_x = r;
+                            int rel_x = ((x - pian_x + tem_x) / step_x) * step_x - tem_x + dx * step_x + pian_x;
+                            int tr_x = x - rel_x;
+                            int tr_y = y - rel_y;   
+                                if (tr_x * tr_x + tr_y * tr_y <= r * r)
+                                {
+                                    re.insert(pair<int, int>(rel_x, rel_y));
+                                    re_count++;
+                                    found1 = true;
+                                }
+                        }
+                    }
+                }
+                if (re_count * 100 >= 89 * n)
+                {
+                    cout << re.size() << '\n';
+                    for (auto& i : re)
+                    {
+                        cout << i.first << ' ' << i.second << '\n';
+                        
+                    }return 0;
+                }
+            }
+        }
+    return 0;
+}
+int rel_y = ((y - pian_y) / step_y) * step_y + dy * step_y + pian_y;
+                            int tem_x = (rel_y / step_y) % 2;
+                            if (tem_x != 0)
+                                tem_x = r;
+                            int rel_x = ((x - pian_x + tem_x) / step_x) * step_x - tem_x + dx * step_x + pian_x;
+                            int tr_x = x - rel_x;
+                            int tr_y = y - rel_y;   
+这里用了很多相对的 模拟到中心元 如果是奇数 也是移动一下r 模拟去中心圆形 圆心在0.0处
+  for (int pian_x = 0; pian_x < step_x; pian_x++)
+        {
+            for (int pian_y = 0; pian_y < step_y * 2; pian_y++)
+这个是偏移 应为mod总是取偏向0 x大于0就应该取0 1小于就0 -1 判断的话不如1 0 -1 这3个都来一次 就剩去判断 弄个外置函数也行 但是目前没这种优秀的习惯 2026.4.23
